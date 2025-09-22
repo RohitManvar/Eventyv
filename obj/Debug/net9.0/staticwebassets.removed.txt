@@ -1,0 +1,2 @@
+C:\Users\rohit\source\repos\Eventyv\wwwroot\css\header.css
+C:\Users\rohit\source\repos\Eventyv\wwwroot\css\footer.css

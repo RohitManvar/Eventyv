@@ -2,105 +2,524 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eventyv - Register</title>
+    <title>Create your Eventyv account</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f6f7f7;
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', sans-serif;
+            color: #2c3338;
+            line-height: 1.4;
+            padding: 20px;
         }
 
-        .card {
-            border-radius: 1rem;
-            padding: 2rem;
+        .register-container {
             background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+            width: 100%;
+            max-width: 800px;
             opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 0.8s forwards;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        @@keyframes fadeInUp {
+            to
+
+        {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .register-title {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #23282d;
+        }
+
+        .register-subtitle {
+            font-size: 14px;
+            color: #646970;
+            margin-bottom: 8px;
+        }
+
+        .terms-links {
+            font-size: 14px;
+            color: #646970;
+        }
+
+            .terms-links a {
+                color: #0073aa;
+                text-decoration: underline;
             }
+
+                .terms-links a:hover {
+                    color: #005a87;
+                }
+
+        .register-content {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
         }
 
-        .btn-primary {
-            background: #667eea;
+        .left-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .right-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .divider-vertical {
+            width: 1px;
+            background-color: #dcdcde;
+            margin: 0 30px;
+            align-self: stretch;
+        }
+
+        .divider-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0073aa;
+            font-size: 14px;
+            margin: 20px 0;
+            background: white;
+            padding: 10px 0;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1d2327;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #8c8f94;
+            border-radius: 4px;
+            background-color: white;
+            color: #2c3338;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #0073aa;
+                box-shadow: 0 0 0 1px #0073aa;
+            }
+
+            .form-control::placeholder {
+                color: #8c8f94;
+            }
+
+        .continue-btn {
+            width: 100%;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #3858e9;
+            color: white;
             border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
         }
 
-        .btn-primary:hover {
-            background: #5a67d8;
+            .continue-btn:hover {
+                background-color: #2547d6;
+            }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        input::placeholder {
-            color: #999;
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 20px;
+            border: 1px solid #dcdcde;
+            border-radius: 4px;
+            background-color: white;
+            color: #2c3338;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            cursor: pointer;
+            width: 80%;
+        }
+
+            .social-btn:hover {
+                border-color: #8c8f94;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                color: #2c3338;
+                text-decoration: none;
+            }
+
+            .social-btn i {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+            }
+
+        .google-icon {
+            color: #4285f4;
+        }
+
+        .apple-icon {
+            color: #000;
+        }
+
+        .email-icon {
+            color: #666;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #646970;
+        }
+
+            .login-link a {
+                color: #0073aa;
+                text-decoration: none;
+            }
+
+                .login-link a:hover {
+                    text-decoration: underline;
+                }
+
+        .text-danger {
+            color: #d63638;
+            font-size: 14px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .validation-summary {
+            background-color: #fcf0f1;
+            border: 1px solid #f1adad;
+            color: #d63638;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+            .validation-summary ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+        .password-requirements {
+            font-size: 13px;
+            color: #646970;
+            margin-top: 6px;
+        }
+
+        .password-strength {
+            margin-top: 8px;
+        }
+
+        .strength-bar {
+            height: 4px;
+            background-color: #dcdcde;
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 4px 0;
+        }
+
+        .strength-fill {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .strength-weak {
+            background-color: #dc3545;
+            width: 25%;
+        }
+
+        .strength-fair {
+            background-color: #fd7e14;
+            width: 50%;
+        }
+
+        .strength-good {
+            background-color: #ffc107;
+            width: 75%;
+        }
+
+        .strength-strong {
+            background-color: #28a745;
+            width: 100%;
+        }
+
+        @@media (max-width: 768px) {
+            .register-container
+
+        {
+            padding: 40px 30px;
+        }
+
+        .register-content {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .divider-vertical {
+            display: none;
+        }
+
+        .divider-text {
+            display: block;
+            text-align: center;
+            border-top: 1px solid #dcdcde;
+            margin: 30px 0;
+            padding-top: 20px;
+        }
+
+        }
+
+        @@media (max-width: 576px) {
+            .register-container
+
+        {
+            padding: 30px 20px;
+            margin: 10px;
+        }
+
         }
     </style>
 </head>
 <body>
-    <div class="card shadow-sm col-md-5">
-        <div class="text-center mb-4">
-            <img src="~/images/logo.png" alt="Eventyv Logo" width="100" />
+    <div class="register-container">
+        <div class="register-header">
+            <h1 class="register-title">Create your Eventyv account</h1>
+            <p class="register-subtitle">Just a little reminder that by continuing with any of the options</p>
+            <p class="terms-links">
+                below, you agree to our
+                <a asp-controller="Home" asp-action="Terms">Terms of Service</a>
+                and
+                <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.
+            </p>
         </div>
 
-        <h3 class="text-center mb-4">Register</h3>
+        <!-- Validation Summary -->
+        @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+        {
+            <div class="validation-summary">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values
+                                    .Where(v => v?.Errors?.Any() == true)
+                                    .SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
 
-        <form asp-action="Register" method="post">
-            <div class="mb-3">
-                <input asp-for="UserName" class="form-control" placeholder="Username" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+        <div class="register-content">
+            <!-- Left Section - Registration Form -->
+            <div class="left-section">
+                <form asp-action="Register" method="post">
+                    <div class="form-group">
+                        <label class="form-label" asp-for="UserName">Username</label>
+                        <input asp-for="UserName" class="form-control" placeholder="Choose a username" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" asp-for="Email">Email address</label>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="Enter your email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" asp-for="Password">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Create a password" id="password" />
+                        <div class="password-requirements">
+                            Password should be at least 8 characters long
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthBar"></div>
+                            </div>
+                            <span id="strengthText" style="font-size: 12px;"></span>
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" asp-for="ConfirmPassword">Confirm password</label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm your password" id="confirmPassword" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="continue-btn">Create Account</button>
+                </form>
+
+                <div class="login-link">
+                    <p>Already have an account? <a asp-controller="Account" asp-action="Login">Log in</a></p>
+                </div>
             </div>
 
-            <div class="mb-3">
-                <input asp-for="Email" class="form-control" placeholder="Email" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+            <!-- Vertical Divider -->
+            <div class="divider-vertical"></div>
+            <div class="divider-text d-md-none">OR</div>
+
+            <!-- Right Section - Social Registration Options -->
+            <div class="right-section">
+                <div class="social-buttons">
+                    <button type="button" class="social-btn" onclick="signupWithGoogle()">
+                        <i class="fab fa-google google-icon"></i>
+                        Continue with Google
+                    </button>
+
+                    <button type="button" class="social-btn" onclick="signupWithApple()">
+                        <i class="fab fa-apple apple-icon"></i>
+                        Continue with Apple
+                    </button>
+
+                    <button type="button" class="social-btn" onclick="emailSignupLink()">
+                        <i class="fas fa-envelope email-icon"></i>
+                        Email me a signup link
+                    </button>
+                </div>
             </div>
-
-            <div class="mb-3 position-relative">
-                <input asp-for="Password" type="password" class="form-control" placeholder="Password" id="password" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-                <button type="button" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 mt-1 me-1" onclick="togglePassword('password')">Show</button>
-            </div>
-
-            <div class="mb-3 position-relative">
-                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" id="confirmPassword" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                <button type="button" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 mt-1 me-1" onclick="togglePassword('confirmPassword')">Show</button>
-            </div>
-
-            <div class="mb-3">
-                <input asp-for="FullName" class="form-control" placeholder="Full Name" />
-                <span asp-validation-for="FullName" class="text-danger"></span>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Register</button>
-        </form>
-
-        <p class="text-center mt-3">
-            Already have an account? <a asp-controller="Account" asp-action="Login">Login</a>
-        </p>
-
-        <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
     </div>
 
     <script>
-        function togglePassword(id) {
-            var input = document.getElementById(id);
-            input.type = input.type === "password" ? "text" : "password";
+        // Password strength checker
+        function checkPasswordStrength(password) {
+            const strengthBar = document.getElementById('strengthBar');
+            const strengthText = document.getElementById('strengthText');
+
+            let score = 0;
+            if (password.length >= 8) score++;
+            if (password.match(/[a-z]/)) score++;
+            if (password.match(/[A-Z]/)) score++;
+            if (password.match(/[0-9]/)) score++;
+            if (password.match(/[^a-zA-Z0-9]/)) score++;
+
+            strengthBar.className = 'strength-fill';
+
+            if (score < 2) {
+                strengthBar.classList.add('strength-weak');
+                strengthText.textContent = 'Weak';
+                strengthText.style.color = '#dc3545';
+            } else if (score < 3) {
+                strengthBar.classList.add('strength-fair');
+                strengthText.textContent = 'Fair';
+                strengthText.style.color = '#fd7e14';
+            } else if (score < 4) {
+                strengthBar.classList.add('strength-good');
+                strengthText.textContent = 'Good';
+                strengthText.style.color = '#ffc107';
+            } else {
+                strengthBar.classList.add('strength-strong');
+                strengthText.textContent = 'Strong';
+                strengthText.style.color = '#28a745';
+            }
         }
+
+        // Social signup functions
+        function signupWithGoogle() {
+            console.log('Google signup clicked');
+            // Implement Google OAuth signup
+            // window.location.href = '/Account/GoogleSignup';
+        }
+
+        function signupWithApple() {
+            console.log('Apple signup clicked');
+            // Implement Apple OAuth signup
+            // window.location.href = '/Account/AppleSignup';
+        }
+
+        function emailSignupLink() {
+            console.log('Email signup link clicked');
+            // Implement magic link signup
+            // window.location.href = '/Account/MagicLinkSignup';
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordInput = document.getElementById('password');
+            const usernameInput = document.querySelector('input[name="UserName"]');
+
+            // Auto-focus on username field
+            if (usernameInput) {
+                usernameInput.focus();
+            }
+
+            // Password strength checking
+            if (passwordInput) {
+                passwordInput.addEventListener('input', function() {
+                    checkPasswordStrength(this.value);
+                });
+            }
+
+            // Confirm password validation
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            if (confirmPasswordInput) {
+                confirmPasswordInput.addEventListener('input', function() {
+                    if (passwordInput.value !== this.value) {
+                        this.setCustomValidity('Passwords do not match');
+                    } else {
+                        this.setCustomValidity('');
+                    }
+                });
+            }
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

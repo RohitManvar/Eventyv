@@ -1,55 +1,78 @@
-﻿<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Eventyv</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Eventyv.styles.css" asp-append-version="true" />
-    <title>Eventyv - Login/Register</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/hf.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Eventyv.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Eventyv</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container d-flex justify-content-between align-items-center">
+            @Html.ActionLink("eventyv", "Index", "Home", null, new { @class = "logo" })
+
+            <!-- Search -->
+            <div class="search-container d-flex">
+                <input type="text" class="form-control me-2" placeholder="Search events">
+                <input type="text" class="form-control me-2" placeholder="Search location">
+                <button class="btn btn-primary"><i class="fas fa-search"></i></button>
             </div>
-        </nav>
+
+            <!-- Actions -->
+            <div class="header-actions d-flex align-items-center">
+                @Html.ActionLink("Find Events", "Events", "Home", null, new { @class = "header-link me-2" })
+                @Html.ActionLink("Create Events", "Create", "Events", null, new { @class = "create-event-btn me-2" })
+                @Html.ActionLink("Help Center", "Help", "Home", null, new { @class = "header-link me-2" })
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <!-- Profile dropdown -->
+                    <div class="dropdown">
+                        <a class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" href="#" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="user-avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2" style="width:32px; height:32px;">
+                                @User.Identity.Name.Substring(0, 1).ToUpper()
+                            </div>
+                            <span>@User.Identity.Name</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li>@Html.ActionLink("Browse Events", "Events", "Home", null, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Manage My Events", "MyEvents", "Events", null, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Tickets", "MyTickets", "Account", null, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Liked", "LikedEvents", "Account", null, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Interest", "InterestedEvents", "Account", null, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Account Settings", "Settings", "Account", null, new { @class = "dropdown-item" })</li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>@Html.ActionLink("Logout", "Logout", "Account", null, new { @class = "dropdown-item" })</li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    @Html.ActionLink("Log in", "Login", "Account", null, new { @class = "header-link me-2" })
+                    @Html.ActionLink("Sign up", "Register", "Account", null, new { @class = "header-link" })
+                }
+            </div>
+        </div>
     </header>
-    <div class="container">
+
+    <!-- Main content -->
+    <div class="container mt-3">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Eventyv - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -153,7 +153,6 @@ C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\scopedcss\bundle\Eventyv.styles.css
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\scopedcss\projectbundle\Eventyv.bundle.scp.css
-C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\compressed\6cp226yu8n-b9sayid5wm.gz
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\compressed\d4oo6o9xc7-61n19gt1b8.gz
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\compressed\0kngrt54ys-xtxxf3hu2r.gz
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\compressed\kqbzyuqext-bqjiyaj88i.gz
@@ -228,3 +227,6 @@ C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\refint\Eventyv.dll
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\Eventyv.pdb
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\Eventyv.genruntimeconfig.cache
 C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\ref\Eventyv.dll
+C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\Eventyv.sourcelink.json
+C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\compressed\i1ph1zykbj-1ueywspoo8.gz
+C:\Users\rohit\source\repos\Eventyv\obj\Debug\net9.0\compressed\6cp226yu8n-b9sayid5wm.gz

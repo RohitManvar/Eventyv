@@ -1,3 +1,4 @@
+wwwroot\css\hf.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
@@ -123,3 +124,4 @@ C:\Users\rohit\source\repos\Eventyv\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\rohit\source\repos\Eventyv\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\rohit\source\repos\Eventyv\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\rohit\source\repos\Eventyv\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\rohit\source\repos\Eventyv\wwwroot\css\hf.css
