@@ -1,4 +1,4 @@
-using Eventyv.Models;
+﻿using Eventyv.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

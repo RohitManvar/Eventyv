@@ -2,34 +2,46 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eventyv - Login</title>
+    <title>Log in to Eventyv</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f6f7f7;
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', sans-serif;
+            color: #2c3338;
+            line-height: 1.4;
+            padding: 20px;
         }
 
-        .card {
-            border-radius: 1rem;
-            padding: 2rem;
+        .login-container {
             background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+            width: 100%;
+            max-width: 800px;
             opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 0.8s forwards;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        @keyframes fadeInUp {
+        @@keyframes fadeInUp {
             to
 
         {
@@ -39,55 +51,382 @@
 
         }
 
-        .btn-primary {
-            background: #667eea;
-            border: none;
+        .login-header {
+            text-align: center;
+            margin-bottom: 48px;
         }
 
-            .btn-primary:hover {
-                background: #5a67d8;
+        .login-title {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #23282d;
+        }
+
+        .login-subtitle {
+            font-size: 14px;
+            color: #646970;
+            margin-bottom: 8px;
+        }
+
+        .terms-links {
+            font-size: 14px;
+            color: #646970;
+        }
+
+            .terms-links a {
+                color: #0073aa;
+                text-decoration: underline;
             }
 
-        input::placeholder {
-            color: #999;
+                .terms-links a:hover {
+                    color: #005a87;
+                }
+
+        .login-content {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .left-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .right-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .divider-vertical {
+            width: 1px;
+            background-color: #dcdcde;
+            margin: 0 30px;
+            align-self: stretch;
+        }
+
+        .divider-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8c8f94;
+            font-size: 14px;
+            margin: 20px 0;
+            background: white;
+            padding: 10px 0;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1d2327;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #8c8f94;
+            border-radius: 4px;
+            background-color: white;
+            color: #2c3338;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #0073aa;
+                box-shadow: 0 0 0 1px #0073aa;
+            }
+
+            .form-control::placeholder {
+                color: #8c8f94;
+            }
+
+        .continue-btn {
+            width: 100%;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #3858e9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
+        }
+
+            .continue-btn:hover {
+                background-color: #2547d6;
+            }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 20px;
+            border: 1px solid #dcdcde;
+            border-radius: 4px;
+            background-color: white;
+            color: #2c3338;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            cursor: pointer;
+            width: 80%;
+        }
+
+            .social-btn:hover {
+                border-color: #8c8f94;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                color: #2c3338;
+                text-decoration: none;
+            }
+
+            .social-btn i {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+            }
+
+        .google-icon {
+            color: #4285f4;
+        }
+
+        .apple-icon {
+            color: #000;
+        }
+
+        .github-icon {
+            color: #333;
+        }
+
+        .email-icon {
+            color: #666;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+            .forgot-password a {
+                color: #0073aa;
+                text-decoration: underline;
+                font-size: 14px;
+            }
+
+                .forgot-password a:hover {
+                    color: #005a87;
+                }
+
+        .text-danger {
+            color: #d63638;
+            font-size: 14px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .validation-summary {
+            background-color: #fcf0f1;
+            border: 1px solid #f1adad;
+            color: #d63638;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+            .validation-summary ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+        @@media (max-width: 768px) {
+            .login-container
+
+        {
+            padding: 40px 30px;
+        }
+
+        .login-content {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .divider-vertical {
+            display: none;
+        }
+
+        .divider-text {
+            display: block;
+            text-align: center;
+            border-top: 1px solid #dcdcde;
+            margin: 30px 0;
+            padding-top: 20px;
+        }
+
+        }
+
+        @@media (max-width: 576px) {
+            .login-container
+
+        {
+            padding: 30px 20px;
+            margin: 10px;
+        }
+
         }
     </style>
 </head>
 <body>
-    <div class="card shadow-sm col-md-4">
-        <div class="text-center mb-4">
-            <img src="~/images/logo.png" alt="Eventyv Logo" width="100" />
+    <div class="login-container">
+        <div class="login-header">
+            <h1 class="login-title">Log in to Eventyv</h1>
+            <p class="login-subtitle">Just a little reminder that by continuing with any of the options</p>
+            <p class="terms-links">
+                below, you agree to our
+                <a asp-controller="Home" asp-action="Terms">Terms of Service</a>
+                and
+                <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.
+            </p>
         </div>
 
-        <h3 class="text-center mb-4">Login</h3>
+        <!-- Validation Summary -->
+        @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+        {
+            <div class="validation-summary">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values
+                                    .Where(v => v?.Errors?.Any() == true)
+                                    .SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
 
-        <form asp-action="Login" method="post">
-            <div class="mb-3">
-                <input asp-for="UserName" class="form-control" placeholder="Username" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+        <div class="login-content">
+            <!-- Left Section - Traditional Login Form -->
+            <div class="left-section">
+                <form asp-action="Login" method="post">
+                    <div class="form-group">
+                        <label class="form-label" asp-for="UserName">Email address or username</label>
+                        <input asp-for="UserName" class="form-control" placeholder="" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    
+                        <label class="form-label" asp-for="Password">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Password" id="password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                        
+                    </div>
+
+                    <button type="submit" class="continue-btn">Continue</button>
+                </form>
+
+                <div class="register-link">
+                    <p>Don't have an account? <a asp-controller="Account" asp-action="Register">Create account</a></p>
+                    <p><a asp-controller="Account" asp-action="ForgotPassword">Lost your password?</a></p>
+                </div>
             </div>
 
-            <div class="mb-3 position-relative">
-                <input asp-for="Password" type="password" class="form-control" placeholder="Password" id="loginPassword" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-                <button type="button" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 mt-1 me-1" onclick="togglePassword('loginPassword')">Show</button>
+            <!-- Vertical Divider -->
+            <div class="divider-vertical"></div>
+            <div class="divider-text d-md-none">OR</div>
+
+            <!-- Right Section - Social Login Options -->
+            <div class="right-section">
+                <div class="social-buttons">
+                    <button type="button" class="social-btn" onclick="loginWithGoogle()">
+                        <i class="fab fa-google google-icon"></i>
+                        Continue with Google
+                    </button>
+
+                    <button type="button" class="social-btn" onclick="loginWithApple()">
+                        <i class="fab fa-apple apple-icon"></i>
+                        Continue with Apple
+                    </button>
+
+                    <button type="button" class="social-btn" onclick="emailLoginLink()">
+                        <i class="fas fa-envelope email-icon"></i>
+                        Email me a login link
+                    </button>
+
+                </div>
             </div>
-
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
-
-        <p class="text-center mt-3">
-            Don't have an account? <a asp-controller="Account" asp-action="Register">Register</a>
-        </p>
-
-        <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
     </div>
 
     <script>
-        function togglePassword(id) {
-            var input = document.getElementById(id);
-            input.type = input.type === "password" ? "text" : "password";
+        // Social login functions
+        function loginWithGoogle() {
+            console.log('Google login clicked');
+            // Implement Google OAuth
+            // window.location.href = '/Account/GoogleLogin';
         }
+
+        function loginWithApple() {
+            console.log('Apple login clicked');
+            // Implement Apple OAuth
+            // window.location.href = '/Account/AppleLogin';
+        }
+
+        function loginWithGithub() {
+            console.log('GitHub login clicked');
+            // Implement GitHub OAuth
+            // window.location.href = '/Account/GitHubLogin';
+        }
+
+        function emailLoginLink() {
+            console.log('Email login link clicked');
+            // Implement magic link functionality
+            // window.location.href = '/Account/MagicLink';
+        }
+
+        function loginWithJetpack() {
+            console.log('Jetpack login clicked');
+            // Custom implementation
+        }
+
+        // Auto-focus on username field
+        document.addEventListener('DOMContentLoaded', function () {
+            const usernameInput = document.querySelector('input[name="UserName"]');
+            if (usernameInput) {
+                usernameInput.focus();
+            }
+        });
+
+        // Handle form submission to show password field if needed
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const usernameInput = document.querySelector('input[name="UserName"]');
+            const passwordInput = document.querySelector('input[name="Password"]');
+
+            // If no password field exists yet, you might want to add it dynamically
+            // This matches WordPress.com behavior where password field appears after username
+            if (!passwordInput && usernameInput.value.trim()) {
+                // You can implement dynamic password field here
+                // For now, let the form submit normally
+            }
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
