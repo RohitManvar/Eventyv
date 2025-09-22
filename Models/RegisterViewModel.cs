@@ -19,6 +19,5 @@ namespace Eventyv.Models
         [Compare("Password", ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }
 
-        [Required] public string FullName { get; set; }
     }
 }

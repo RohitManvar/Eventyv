@@ -38,7 +38,6 @@ namespace Eventyv.Controllers
                     UserName = model.UserName,
                     Email = model.Email,
                     PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
-                    FullName = model.FullName,
                     CreatedAt = DateTime.Now
                 };
 
