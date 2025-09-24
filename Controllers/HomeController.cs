@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Eventyv.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Eventyv.Controllers
 {
@@ -15,10 +16,8 @@ namespace Eventyv.Controllers
 
         public IActionResult Index()
         {
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
-                return RedirectToAction("Login", "Account");
-
-            ViewBag.UserName = HttpContext.Session.GetString("UserName");
+            // Remove manual session check - authentication is now handled by [Authorize] attribute
+            // The layout will automatically show/hide login buttons based on User.Identity.IsAuthenticated
             return View();
         }
 

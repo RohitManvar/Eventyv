@@ -1,0 +1,32 @@
+﻿@model List<Eventyv.Models.Event>
+@{
+    ViewData["Title"] = $"Search Results for '{ViewBag.SearchQuery}'";
+}
+
+<h1>Search Results for '@ViewBag.SearchQuery'</h1>
+
+<div class="events-content">
+    @if (!Model.Any())
+    {
+        <div class="no-results">
+            <div class="no-results-icon"><i class="fas fa-search"></i></div>
+            <h3>No events found for "@ViewBag.SearchQuery"</h3>
+            <p>Try adjusting your filters or search terms</p>
+        </div>
+    }
+    else
+    {
+        @foreach (var ev in Model)
+        {
+            <div class="popular-event-card" onclick="location.href='@Url.Action("Details", "Events", new { id = ev.Id })'">
+                <div class="popular-event-image">@ev.Status</div>
+                <div class="popular-event-content">
+                    <h4 class="popular-event-title">@ev.Title</h4>
+                    <p class="popular-event-date">@ev.Date.ToString("ddd • h:mm tt")</p>
+                    <p class="popular-event-location">@ev.Location</p>
+                    <p class="popular-event-price">@ev.Price</p>
+                </div>
+            </div>
+        }
+    }
+</div>

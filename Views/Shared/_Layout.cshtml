@@ -28,7 +28,7 @@
 
             <!-- Actions -->
             <div class="header-actions d-flex align-items-center">
-                @Html.ActionLink("Find Events", "Events", "Home", null, new { @class = "header-link me-2" })
+                @Html.ActionLink("Find Events", "SearchEvent", "Events", null, new { @class = "header-link me-2" })
                 @Html.ActionLink("Create Events", "Create", "Events", null, new { @class = "create-event-btn me-2" })
                 @Html.ActionLink("Help Center", "Help", "Home", null, new { @class = "header-link me-2" })
 
@@ -56,10 +56,18 @@
                 }
                 else
                 {
-                    @Html.ActionLink("Log in", "Login", "Account", null, new { @class = "header-link me-2" })
-                    @Html.ActionLink("Sign up", "Register", "Account", null, new { @class = "header-link" })
+                    // Hide login/signup on Login and Register pages
+                    var currentAction = ViewContext.RouteData.Values["Action"]?.ToString();
+                    var currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
+
+                    if (!(currentController == "Account" && (currentAction == "Login" || currentAction == "Register")))
+                    {
+                        @Html.ActionLink("Log in", "Login", "Account", null, new { @class = "header-link me-2" })
+                        @Html.ActionLink("Sign up", "Register", "Account", null, new { @class = "header-link" })
+                    }
                 }
             </div>
+
         </div>
     </header>
 
