@@ -1,0 +1,993 @@
+﻿@model IEnumerable<Eventyv.Models.Event>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explore Events - Eventyv</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+            .brand-logo i {
+                font-size: 24px;
+                color: #F05537;
+                margin-right: 8px;
+            }
+
+        .brand-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #F05537;
+        }
+
+        .search-container {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 32px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 48px 12px 16px;
+            font-size: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #fafafa;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+            .search-input:focus {
+                border-color: #F05537;
+                background-color: white;
+                box-shadow: 0 0 0 3px rgba(240, 85, 55, 0.1);
+            }
+
+        .search-btn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #F05537;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+            .search-btn:hover {
+                background: #e04527;
+            }
+
+        .user-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+            .user-nav a, .user-nav button {
+                color: #64748b;
+                text-decoration: none;
+                font-weight: 500;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: inherit;
+            }
+
+                .user-nav a:hover, .user-nav button:hover {
+                    color: #F05537;
+                }
+
+        .create-btn {
+            background: #F05537 !important;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+            .create-btn:hover {
+                background: #e04527 !important;
+            }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            color: #64748b;
+        }
+
+        .filters-section {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .filters-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filters-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .clear-filters {
+            color: #F05537;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+            .clear-filters:hover {
+                text-decoration: underline;
+            }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .filter-select {
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #fafafa;
+            color: #1e293b;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+            .filter-select:focus {
+                border-color: #F05537;
+                background-color: white;
+            }
+
+        .category-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+
+        .category-tab {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+            .category-tab:hover, .category-tab.active {
+                border-color: #F05537;
+                color: #F05537;
+                background: #fef7f0;
+            }
+
+            .category-tab i {
+                margin-right: 8px;
+                font-size: 16px;
+            }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+            .event-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+                text-decoration: none;
+                color: inherit;
+            }
+
+        .event-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-date-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge-month {
+            font-size: 12px;
+            font-weight: 700;
+            color: #F05537;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-day {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1;
+        }
+
+        .event-price {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .event-favorite {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #64748b;
+            border: none;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .event-favorite:hover {
+                background: white;
+                color: #F05537;
+                transform: scale(1.1);
+            }
+
+            .event-favorite.favorited {
+                color: #F05537;
+                background: white;
+            }
+
+        .event-content {
+            padding: 24px;
+        }
+
+        .event-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .event-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+            .event-meta i {
+                width: 16px;
+                text-align: center;
+            }
+
+        .event-organizer {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 16px;
+        }
+
+        .event-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .event-tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .event-attendees {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .attendee-avatars {
+            display: flex;
+            margin-left: -4px;
+        }
+
+        .attendee-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #F05537, #e04527);
+            border: 2px solid white;
+            margin-left: -4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .no-events {
+            text-align: center;
+            padding: 80px 20px;
+            color: #64748b;
+        }
+
+            .no-events i {
+                font-size: 48px;
+                margin-bottom: 16px;
+                color: #cbd5e1;
+            }
+
+            .no-events h3 {
+                font-size: 24px;
+                margin-bottom: 8px;
+                color: #374151;
+            }
+
+        .load-more {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .load-more-btn {
+            background: white;
+            color: #F05537;
+            border: 2px solid #F05537;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .load-more-btn:hover {
+                background: #F05537;
+                color: white;
+            }
+
+        .events-count {
+            margin-bottom: 24px;
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        /* Responsive */
+        @@media (max-width: 768px) {
+            .header-container
+
+        {
+            flex-direction: column;
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .search-container {
+            margin: 0;
+            max-width: none;
+            width: 100%;
+        }
+
+        .user-nav {
+            order: -1;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .main-container {
+            padding: 24px 16px;
+        }
+
+        .page-title {
+            font-size: 28px;
+        }
+
+        .filters-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .category-tabs {
+            padding-bottom: 16px;
+        }
+
+        .events-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .filters-section {
+            padding: 16px;
+        }
+
+        }
+
+        @@media (max-width: 480px) {
+            .event-card
+
+        {
+            margin: 0 -8px;
+        }
+
+        .page-title {
+            font-size: 24px;
+        }
+
+        .page-subtitle {
+            font-size: 16px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="@Url.Action("Index", "Home")" class="brand-logo">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="brand-text">eventyv</span>
+            </a>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search events..." id="searchInput">
+                <button class="search-btn" onclick="searchEvents()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <nav class="user-nav">
+                <a href="@Url.Action("Index", "Home")">Browse Events</a>
+                <a href="@Url.Action("Create", "Events")" class="create-btn">Create Event</a>
+                <button onclick="toggleUserMenu()">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Discover Amazing Events</h1>
+            <p class="page-subtitle">Find events that match your interests</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="filters-header">
+                <h3 class="filters-title">Filter Events</h3>
+                <a href="#" class="clear-filters" onclick="clearAllFilters()">Clear All</a>
+            </div>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label class="filter-label">Location</label>
+                    <select class="filter-select" id="locationFilter" onchange="applyFilters()">
+                        <option value="">All Locations</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="pune">Pune</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Date</label>
+                    <select class="filter-select" id="dateFilter" onchange="applyFilters()">
+                        <option value="">Any Date</option>
+                        <option value="today">Today</option>
+                        <option value="tomorrow">Tomorrow</option>
+                        <option value="this-week">This Week</option>
+                        <option value="this-weekend">This Weekend</option>
+                        <option value="next-week">Next Week</option>
+                        <option value="this-month">This Month</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Price</label>
+                    <select class="filter-select" id="priceFilter" onchange="applyFilters()">
+                        <option value="">Any Price</option>
+                        <option value="free">Free</option>
+                        <option value="0-500">₹0 - ₹500</option>
+                        <option value="500-1000">₹500 - ₹1000</option>
+                        <option value="1000-2000">₹1000 - ₹2000</option>
+                        <option value="2000+">₹2000+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Sort By</label>
+                    <select class="filter-select" id="sortFilter" onchange="applyFilters()">
+                        <option value="relevance">Relevance</option>
+                        <option value="date">Date</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <a href="#" class="category-tab active" onclick="filterByCategory('all')">
+                <i class="fas fa-th"></i> All
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('music')">
+                <i class="fas fa-music"></i> Music
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('business')">
+                <i class="fas fa-briefcase"></i> Business
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('food')">
+                <i class="fas fa-utensils"></i> Food & Drink
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('arts')">
+                <i class="fas fa-palette"></i> Arts
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('sports')">
+                <i class="fas fa-running"></i> Sports
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('technology')">
+                <i class="fas fa-laptop"></i> Technology
+            </a>
+            <a href="#" class="category-tab" onclick="filterByCategory('nightlife')">
+                <i class="fas fa-theater-masks"></i> Nightlife
+            </a>
+        </div>
+
+        <!-- Events Count -->
+        <div class="events-count" id="eventsCount">
+            Showing 12 events
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid" id="eventsGrid">
+            <!-- Event Card 1 -->
+            <a href="@Url.Action("Details", "Events", new { id = 1 })" class="event-card">
+                <div class="event-image" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <div class="event-date-badge">
+                        <div class="badge-month">Dec</div>
+                        <div class="badge-day">15</div>
+                    </div>
+                    <div class="event-price">Free</div>
+                    <button class="event-favorite" onclick="toggleFavorite(event, 1)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">18TH Engineering Industrial Exhibition Vadodara 2026</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> Sat, Dec 7 • 9:30 AM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Vadodara</span>
+                    </div>
+                    <div class="event-organizer">By Yuvashakti Group</div>
+                    <div class="event-tags">
+                        <span class="event-tag">Technology</span>
+                        <span class="event-tag">Exhibition</span>
+                    </div>
+                    <div class="event-attendees">
+                        <div class="attendee-avatars">
+                            <div class="attendee-avatar">A</div>
+                            <div class="attendee-avatar">B</div>
+                            <div class="attendee-avatar">C</div>
+                        </div>
+                        <span>245+ attending</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Event Card 2 -->
+            <a href="@Url.Action("Details", "Events", new { id = 2 })" class="event-card">
+                <div class="event-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <div class="event-date-badge">
+                        <div class="badge-month">Dec</div>
+                        <div class="badge-day">20</div>
+                    </div>
+                    <div class="event-price">₹499</div>
+                    <button class="event-favorite" onclick="toggleFavorite(event, 2)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Best Punjabi Holi Party Trip Package</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> Fri, Dec 20 • 5:30 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Vadodara</span>
+                    </div>
+                    <div class="event-organizer">By TravelHolics</div>
+                    <div class="event-tags">
+                        <span class="event-tag">Party</span>
+                        <span class="event-tag">Travel</span>
+                    </div>
+                    <div class="event-attendees">
+                        <div class="attendee-avatars">
+                            <div class="attendee-avatar">D</div>
+                            <div class="attendee-avatar">E</div>
+                            <div class="attendee-avatar">F</div>
+                            <div class="attendee-avatar">G</div>
+                        </div>
+                        <span>89+ attending</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Event Card 3 -->
+            <a href="@Url.Action("Details", "Events", new { id = 3 })" class="event-card">
+                <div class="event-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                    <div class="event-date-badge">
+                        <div class="badge-month">Dec</div>
+                        <div class="badge-day">22</div>
+                    </div>
+                    <div class="event-price">₹199</div>
+                    <button class="event-favorite favorited" onclick="toggleFavorite(event, 3)">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Hoppam 2025: Ahmedabad (Gujarat)</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> Mon, Dec 22 • 10:00 AM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Ahmedabad</span>
+                    </div>
+                    <div class="event-organizer">By EventHub</div>
+                    <div class="event-tags">
+                        <span class="event-tag">Conference</span>
+                        <span class="event-tag">Networking</span>
+                    </div>
+                    <div class="event-attendees">
+                        <div class="attendee-avatars">
+                            <div class="attendee-avatar">H</div>
+                            <div class="attendee-avatar">I</div>
+                        </div>
+                        <span>156+ attending</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Event Card 4 -->
+            <a href="@Url.Action("Details", "Events", new { id = 4 })" class="event-card">
+                <div class="event-image" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                    <div class="event-date-badge">
+                        <div class="badge-month">Dec</div>
+                        <div class="badge-day">28</div>
+                    </div>
+                    <div class="event-price">Free</div>
+                    <button class="event-favorite" onclick="toggleFavorite(event, 4)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Pool Party Extravaganza</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> Sat, Dec 28 • 6:30 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Mumbai</span>
+                    </div>
+                    <div class="event-organizer">By Party Planners</div>
+                    <div class="event-tags">
+                        <span class="event-tag">Pool Party</span>
+                        <span class="event-tag">Music</span>
+                    </div>
+                    <div class="event-attendees">
+                        <div class="attendee-avatars">
+                            <div class="attendee-avatar">J</div>
+                            <div class="attendee-avatar">K</div>
+                            <div class="attendee-avatar">L</div>
+                        </div>
+                        <span>324+ attending</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Event Card 5 -->
+            <a href="@Url.Action("Details", "Events", new { id = 5 })" class="event-card">
+                <div class="event-image" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                    <div class="event-date-badge">
+                        <div class="badge-month">Dec</div>
+                        <div class="badge-day">31</div>
+                    </div>
+                    <div class="event-price">₹1,299</div>
+                    <button class="event-favorite" onclick="toggleFavorite(event, 5)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">New Year Party 2025 - Jungle Music Festival</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> Tue, Dec 31 • 8:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Bangalore</span>
+                    </div>
+                    <div class="event-organizer">By Music Events</div>
+                    <div class="event-tags">
+                        <span class="event-tag">New Year</span>
+                        <span class="event-tag">Music</span>
+                    </div>
+                    <div class="event-attendees">
+                        <div class="attendee-avatars">
+                            <div class="attendee-avatar">M</div>
+                            <div class="attendee-avatar">N</div>
+                            <div class="attendee-avatar">O</div>
+                            <div class="attendee-avatar">P</div>
+                        </div>
+                        <span>567+ attending</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Event Card 6 -->
+            <a href="@Url.Action("Details", "Events", new { id = 6 })" class="event-card">
+                <div class="event-image" style="background: linear-gradient(135deg, #d299c2, #fef9d7);">
+                    <div class="event-date-badge">
+                        <div class="badge-month">Jan</div>
+                        <div class="badge-day">5</div>
+                    </div>
+                    <div class="event-price">₹2,999</div>
+                    <button class="event-favorite" onclick="toggleFavorite(event, 6)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">Startup Mini Meetup (Ahmedabad)</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> Sun, Jan 5 • 2:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Ahmedabad</span>
+                    </div>
+                    <div class="event-organizer">By Startup Community</div>
+                    <div class="event-tags">
+                        <span class="event-tag">Startup</span>
+                        <span class="event-tag">Business</span>
+                    </div>
+                    <div class="event-attendees">
+                        <div class="attendee-avatars">
+                            <div class="attendee-avatar">Q</div>
+                            <div class="attendee-avatar">R</div>
+                        </div>
+                        <span>45+ attending</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more">
+            <button class="load-more-btn" onclick="loadMoreEvents()">
+                Load More Events
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        function searchEvents() {
+            const searchTerm = document.getElementById('searchInput').value;
+            console.log('Searching for:', searchTerm);
+            // Implement search logic here
+            if (searchTerm.trim()) {
+                window.location.href = '@Url.Action("Search", "Events")?q=' + encodeURIComponent(searchTerm);
+            }
+        }
+
+        // Enter key search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchEvents();
+            }
+        });
+
+        // Category filtering
+        function filterByCategory(category) {
+            // Update active tab
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.closest('.category-tab').classList.add('active');
+
+            console.log('Filtering by category:', category);
+            // Implement category filtering logic
+            applyFilters();
+        }
+
+        // Apply all filters
+        function applyFilters() {
+            const location = document.getElementById('locationFilter').value;
+            const date = document.getElementById('dateFilter').value;
+            const price = document.getElementById('priceFilter').value;
+            const sort = document.getElementById('sortFilter').value;
+
+            console.log('Applying filters:', { location, date, price, sort });
+            // Implement filtering logic here
+            updateEventsCount();
+        }
+
+        // Clear all filters
+        function clearAllFilters() {
+            document.getElementById('locationFilter').value = '';
+            document.getElementById('dateFilter').value = '';
+            document.getElementById('priceFilter').value = '';
+            document.getElementById('sortFilter').value = 'relevance';
+
+            // Reset category to all
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector('.category-tab').classList.add('active');
+
+            applyFilters();
+        }
+
+        // Toggle favorite
+        function toggleFavorite(event, eventId) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            const button = event.target.closest('.event-favorite');
+            const icon = button.querySelector('i');
+
+            if (button.classList.contains('favorited')) {
+                button.classList.remove('favorited');
+                icon.className = 'far fa-heart';
+                console.log('Removed from favorites:', eventId);
+            } else {
+                button.classList.add('favorited');
+                icon.className = 'fas fa-heart';
+                console.log('Added to favorites:', eventId);
+            }
+
+            // Implement favorite toggle API call here
+        }
+
+        // Load more events
+        function loadMoreEvents() {
+            console.log('Loading more events...');
+            // Implement load more functionality
+            // You would typically make an AJAX call here
+        }
+
+        // Update events count
+        function updateEventsCount() {
+            const count = document.querySelectorAll('.event-card').length;
+            document.getElementById('eventsCount').textContent = `Showing ${count} events`;
+        }
+
+        // User menu toggle
+        function toggleUserMenu() {
+            console.log('Toggle user menu');
+            // Implement user menu dropdown
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateEventsCount();
+        });
+    </script>
+</body>
+</html>

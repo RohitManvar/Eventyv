@@ -28,8 +28,8 @@
 
             <!-- Actions -->
             <div class="header-actions d-flex align-items-center">
-                @Html.ActionLink("Find Events", "SearchEvent", "Events", null, new { @class = "header-link me-2" })
-                @Html.ActionLink("Create Events", "Create", "Events", null, new { @class = "create-event-btn me-2" })
+                @Html.ActionLink("Find Events", "ExploreEvent", "Events", null, new { @class = "header-link me-2" })
+                @Html.ActionLink("Create Events", "CreateEvent", "Events", null, new { @class = "create-event-btn me-2" })
                 @Html.ActionLink("Help Center", "Help", "Home", null, new { @class = "header-link me-2" })
 
                 @if (User.Identity.IsAuthenticated)

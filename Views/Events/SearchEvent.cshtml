@@ -18,11 +18,11 @@
     {
         @foreach (var ev in Model)
         {
-            <div class="popular-event-card" onclick="location.href='@Url.Action("Details", "Events", new { id = ev.Id })'">
+            <div class="popular-event-card" onclick="location.href='@Url.Action("Details", "Events", new { id = ev.EventId })'">
                 <div class="popular-event-image">@ev.Status</div>
                 <div class="popular-event-content">
                     <h4 class="popular-event-title">@ev.Title</h4>
-                    <p class="popular-event-date">@ev.Date.ToString("ddd • h:mm tt")</p>
+                    <p class="popular-event-date">@ev.StartDate.ToString("ddd • h:mm tt")</p>
                     <p class="popular-event-location">@ev.Location</p>
                     <p class="popular-event-price">@ev.Price</p>
                 </div>

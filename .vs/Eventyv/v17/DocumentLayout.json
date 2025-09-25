@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\rohit\\source\\repos\\Eventyv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\eventyvcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,28 +19,28 @@
       "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\events\\searchevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\events\\exploreevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\events\\exploreevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\events\\createevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\events\\createevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,12 +51,16 @@
       "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -63,8 +71,16 @@
       "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:wwwroot\\css\\hf.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB97091D-C9EC-4EB8-B88B-BDEF233B9A7C}|Eventyv.csproj|c:\\users\\rohit\\source\\repos\\eventyv\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -82,163 +98,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\EventController.cs",
-              "RelativeToolTip": "Controllers\\EventController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA9wBgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T14:12:49.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAOwBAAAAAAAAAAAQwP0BAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-22T06:18:47.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGgAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-21T14:26:22.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFYAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-21T14:34:31.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventyvContext.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\EventyvContext.cs",
-              "RelativeDocumentMoniker": "Models\\EventyvContext.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\EventyvContext.cs",
-              "RelativeToolTip": "Models\\EventyvContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T14:21:17.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAmwCIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T13:50:56.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SearchEvent.cshtml",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\SearchEvent.cshtml",
-              "RelativeDocumentMoniker": "Views\\Events\\SearchEvent.cshtml",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\SearchEvent.cshtml",
-              "RelativeToolTip": "Views\\Events\\SearchEvent.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T14:08:28.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-21T14:26:31.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\Event.cs",
-              "RelativeDocumentMoniker": "Models\\Event.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\Event.cs",
-              "RelativeToolTip": "Models\\Event.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T14:17:52.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwGcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T14:08:26.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwAcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T14:20:40.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwDcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T14:22:29.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "Models\\RegisterViewModel.cs",
@@ -246,11 +106,129 @@
               "RelativeToolTip": "Models\\RegisterViewModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAEwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T14:09:26.618Z"
+              "WhenOpened": "2025-09-21T14:09:26.618Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
+              "Title": "CreateEvent.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\CreateEvent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\CreateEvent.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\CreateEvent.cshtml",
+              "RelativeToolTip": "Views\\Events\\CreateEvent.cshtml",
+              "ViewState": "AgIAABQBAAAAAAAAAAAowEwBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T05:16:41.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventyvContext.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\EventyvContext.cs",
+              "RelativeDocumentMoniker": "Models\\EventyvContext.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\EventyvContext.cs",
+              "RelativeToolTip": "Models\\EventyvContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T14:21:17.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\EventController.cs",
+              "RelativeToolTip": "Controllers\\EventController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T14:12:49.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAADwv2sDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-22T06:18:47.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Models\\Event.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\Event.cs",
+              "RelativeToolTip": "Models\\Event.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T14:17:52.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchEvent.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\SearchEvent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\SearchEvent.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\SearchEvent.cshtml",
+              "RelativeToolTip": "Views\\Events\\SearchEvent.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowBQAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-24T14:08:28.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExploreEvent.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\ExploreEvent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\ExploreEvent.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Events\\ExploreEvent.cshtml",
+              "RelativeToolTip": "Views\\Events\\ExploreEvent.cshtml",
+              "ViewState": "AgIAANYBAAAAAAAAAAAowOUBAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T05:38:55.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T05:52:04.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwB8AAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T14:34:31.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
@@ -263,19 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "hf.css",
-              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\wwwroot\\css\\hf.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\hf.css",
-              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\wwwroot\\css\\hf.css",
-              "RelativeToolTip": "wwwroot\\css\\hf.css",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAIwJwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-22T07:24:09.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -283,11 +249,113 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwA4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-22T07:24:19.263Z"
+              "WhenOpened": "2025-09-22T07:24:19.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAADwv4IAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T14:08:26.657Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "hf.css",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\wwwroot\\css\\hf.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\hf.css",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\wwwroot\\css\\hf.css",
+              "RelativeToolTip": "wwwroot\\css\\hf.css",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-22T07:24:09.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T13:50:56.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-25T05:08:02.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAPIBAAAAAAAAAAAowAACAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T14:26:31.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAJcBAAAAAAAAAADwv6ABAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T14:26:22.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T14:20:40.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\Eventyv\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwDcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T14:22:29.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\Eventyv\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
