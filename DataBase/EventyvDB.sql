@@ -37,7 +37,6 @@ CREATE TABLE Registrations (
     Status NVARCHAR(50) NOT NULL,
     CONSTRAINT FK_Registrations_Events FOREIGN KEY (EventId) 
         REFERENCES Events(EventId) ON DELETE CASCADE,
-    -- Avoid cascade delete from Users to prevent multiple paths
     CONSTRAINT FK_Registrations_Users FOREIGN KEY (UserId) 
         REFERENCES Users(Id) ON DELETE NO ACTION
 );
@@ -61,7 +60,6 @@ CREATE TABLE EmailNotifications (
     Body NVARCHAR(MAX),
     SentAt DATETIME,
     Status NVARCHAR(50),
-    -- Do NOT cascade from both Users and Events (avoid cycles)
     CONSTRAINT FK_EmailNotifications_Users FOREIGN KEY (UserId) 
         REFERENCES Users(Id) ON DELETE NO ACTION,
     CONSTRAINT FK_EmailNotifications_Events FOREIGN KEY (EventId) 
