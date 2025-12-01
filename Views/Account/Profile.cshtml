@@ -1,0 +1,618 @@
+﻿@model EventBriteClone.Models.ViewModels.UserProfileViewModel
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Plak:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Neue Plak', sans-serif;
+            background: #f8f7fa;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .profile-header {
+            background: white;
+            border-radius: 12px;
+            padding: 48px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #6b7280;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+            .profile-info h1 {
+                font-size: 32px;
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+        .edit-btn {
+            padding: 8px 16px;
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 16px;
+        }
+
+        .stat {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+            .stat strong {
+                color: #1e0a3c;
+                font-size: 18px;
+            }
+
+        .tabs {
+            display: flex;
+            gap: 32px;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 32px;
+        }
+
+        .tab {
+            padding: 16px 0;
+            font-weight: 600;
+            color: #6b7280;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s;
+        }
+
+            .tab.active {
+                color: #1e0a3c;
+                border-bottom-color: #f05537;
+            }
+
+        .content-section {
+            display: none;
+        }
+
+            .content-section.active {
+                display: block;
+            }
+
+        .empty-state {
+            background: white;
+            border-radius: 12px;
+            padding: 64px;
+            text-align: center;
+        }
+
+        .empty-state-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: #f3f4f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #9ca3af;
+        }
+
+        .empty-state h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #1e0a3c;
+        }
+
+        .empty-state p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .empty-state-btn {
+            padding: 12px 32px;
+            background: #f05537;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .orders-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .order-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .order-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .order-info p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .order-number {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .order-status {
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+            .order-status.upcoming {
+                background: #dbeafe;
+                color: #1e40af;
+            }
+
+            .order-status.past {
+                background: #f3f4f6;
+                color: #6b7280;
+            }
+
+        .order-details {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .order-image {
+            width: 120px;
+            height: 90px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .order-content {
+            flex: 1;
+        }
+
+        .order-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .order-date {
+            font-size: 14px;
+            color: #f05537;
+            margin-bottom: 4px;
+        }
+
+        .order-location {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .order-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid #d1d5db;
+            background: white;
+            text-decoration: none;
+            color: #1e0a3c;
+        }
+
+            .order-btn.primary {
+                background: #3b5998;
+                color: white;
+                border-color: #3b5998;
+            }
+
+        .likes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+
+            .event-card:hover {
+                transform: translateY(-4px);
+            }
+
+        .event-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 16px;
+        }
+
+        .event-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1e0a3c;
+        }
+
+        .event-date {
+            font-size: 14px;
+            color: #f05537;
+            margin-bottom: 4px;
+        }
+
+        .event-location {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .like-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .like-btn.liked {
+                color: #f05537;
+            }
+
+        .verify-banner {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+            .verify-banner i {
+                font-size: 24px;
+                color: #f59e0b;
+            }
+
+        .verify-banner-content {
+            flex: 1;
+        }
+
+        .verify-banner h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .verify-banner p {
+            font-size: 14px;
+            color: #92400e;
+        }
+
+        .verify-btn {
+            padding: 10px 20px;
+            background: #f59e0b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @@media (max-width: 768px) {
+            .profile-header
+
+        {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .profile-stats {
+            justify-content: center;
+        }
+
+        .order-details {
+            flex-direction: column;
+        }
+
+        .order-image {
+            width: 100%;
+            height: 160px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    @Html.Partial("_Header")
+
+    <div class="container">
+        <!-- Verify Email Banner -->
+        @if (Model?.User?.IsEmailVerified == false)
+        {
+            <div class="verify-banner">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="verify-banner-content">
+                    <h4>Looking for your tickets?</h4>
+                    <p>You need to verify your email to view transfers and gifts.</p>
+                </div>
+                <button class="verify-btn" onclick="verifyEmail()">Verify your email</button>
+            </div>
+        }
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-info">
+                <h1>
+                    @Model?.User?.FirstName @Model?.User?.LastName
+                    <button class="edit-btn" onclick="location.href='/Account/Edit'">
+                        <i class="fas fa-pencil-alt"></i> Edit
+                    </button>
+                </h1>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <strong>@(Model?.OrdersCount ?? 0)</strong> orders
+                    </div>
+                    <div class="stat">
+                        <strong>@(Model?.LikesCount ?? 0)</strong> likes
+                    </div>
+                    <div class="stat">
+                        <strong>@(Model?.FollowingCount ?? 0)</strong> following
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('orders')">Orders</div>
+            <div class="tab" onclick="showTab('likes')">Likes</div>
+            <div class="tab" onclick="showTab('interests')">Interests</div>
+        </div>
+
+        <!-- Orders Tab -->
+        <div id="orders" class="content-section active">
+            @if (Model?.UpcomingOrders != null && Model.UpcomingOrders.Any())
+            {
+                <div class="orders-list">
+                    @foreach (var order in Model.UpcomingOrders)
+                    {
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3>Order #@order.OrderNumber</h3>
+                                    <p>@order.OrderDate.ToString("MMM d, yyyy")</p>
+                                    <p class="order-number">Order Total: $@order.TotalAmount</p>
+                                </div>
+                                <span class="order-status upcoming">Upcoming</span>
+                            </div>
+
+                            @if (order.OrderItems != null && order.OrderItems.Any())
+                            {
+                                var firstItem = order.OrderItems.First();
+                                var eventItem = firstItem.Ticket?.Event;
+
+                                <div class="order-details">
+                                    <img src="@(eventItem?.ImageUrl ?? "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400")"
+                                         alt="Event"
+                                         class="order-image">
+                                    <div class="order-content">
+                                        <div class="order-title">@eventItem?.Title</div>
+                                        <div class="order-date">@eventItem?.StartDate.ToString("ddd, MMM d • h:mm tt")</div>
+                                        <div class="order-location">@eventItem?.Location</div>
+                                    </div>
+                                    <div class="order-actions">
+                                        <a href="/Orders/Details/@order.Id" class="order-btn primary">View tickets</a>
+                                        <button class="order-btn" onclick="shareEvent(@eventItem.Id)">Share</button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+
+                @if (Model?.PastOrders != null && Model.PastOrders.Any())
+                {
+                    <div style="margin-top: 48px;">
+                        <h2 style="margin-bottom: 24px;">Past orders</h2>
+                        <a href="/Orders/PastOrders" style="color: #3b5998; font-weight: 600; text-decoration: none;">
+                            See past orders
+                        </a>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>No upcoming orders</h3>
+                    <p>You don't have any tickets yet. Start exploring events!</p>
+                    <a href="/Events" class="empty-state-btn">Browse events</a>
+                </div>
+            }
+        </div>
+
+        <!-- Likes Tab -->
+        <div id="likes" class="content-section">
+            @if (Model?.User?.LikedEvents != null && Model.User.LikedEvents.Any())
+            {
+                <div class="likes-grid">
+                    @foreach (var like in Model.User.LikedEvents)
+                    {
+                        var evt = like.Event;
+                        <div class="event-card" onclick="location.href='/Events/Details/@evt.Id'">
+                            <div class="like-btn liked" onclick="unlikeEvent(@evt.Id); event.stopPropagation();">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <img src="@(evt.ImageUrl ?? "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400")"
+                                 alt="@evt.Title"
+                                 class="event-image">
+                            <div class="event-content">
+                                <div class="event-title">@evt.Title</div>
+                                <div class="event-date">@evt.StartDate.ToString("ddd, MMM d • h:mm tt")</div>
+                                <div class="event-location">@evt.Location</div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div class="empty-state-icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <h3>Add events, share with friends!</h3>
+                    <p class="subtitle">Easy peasy.</p>
+                </div>
+            }
+        </div>
+
+        <!-- Interests Tab -->
+        <div id="interests" class="content-section">
+            <div class="empty-state">
+                <div class="empty-state-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>No interests yet</h3>
+                <p>Follow event organizers and categories to personalize your experience</p>
+                <a href="/Events" class="empty-state-btn">Discover interests</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected content and activate tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function verifyEmail() {
+            window.location.href = '/Account/VerifyEmail';
+        }
+
+        function shareEvent(eventId) {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Check out this event!',
+                    url: window.location.origin + '/Events/Details/' + eventId
+                });
+            } else {
+                alert('Share link: ' + window.location.origin + '/Events/Details/' + eventId);
+            }
+        }
+
+        function unlikeEvent(eventId) {
+            fetch('/Events/Unlike/' + eventId, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    location.reload();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

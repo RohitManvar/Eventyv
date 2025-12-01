@@ -1,0 +1,549 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\controllers\\accountcontroller..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:controllers\\accountcontroller..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\events\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\events\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\events\\findevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\events\\findevent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\createeventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\createeventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\eventsearchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\eventsearchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\eventdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\eventdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\eventlike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\eventlike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\following.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\following.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|c:\\users\\rohit\\source\\repos\\eventbriteclone\\eventbriteclone.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5279AD53-2CA4-4AA1-B472-A7B650475E5B}|EventBriteClone.csproj|solutionrelative:eventbriteclone.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T11:21:24.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\Details.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\Details.cshtml",
+              "RelativeToolTip": "Views\\Events\\Details.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T10:38:29.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\Create.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\Create.cshtml",
+              "RelativeToolTip": "Views\\Events\\Create.cshtml",
+              "ViewState": "AgIAANUCAAAAAAAAAAAUwOkCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T03:20:37.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Controllers\\EventsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:16:26.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T09:33:35.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:40:34.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController..cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\AccountController..cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController..cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\AccountController..cs",
+              "RelativeToolTip": "Controllers\\AccountController..cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:31:41.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "Views\\Account\\Profile.cshtml",
+              "ViewState": "AgIAAG0BAAAAAAAAAAAqwLIBAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T11:23:19.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\Index.cshtml",
+              "RelativeToolTip": "Views\\Events\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T10:16:43.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T08:41:19.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FindEvent.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\FindEvent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Events\\FindEvent.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Events\\FindEvent.cshtml",
+              "RelativeToolTip": "Views\\Events\\FindEvent.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAGUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T05:41:08.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAswFUBAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T08:29:16.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T10:07:38.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:35:36.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateEventViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\CreateEventViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\CreateEventViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\CreateEventViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\CreateEventViewModel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA/wBwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:00:56.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EventSearchViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\EventSearchViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\EventSearchViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\EventSearchViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\EventSearchViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:29:16.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Models\\Event.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Event.cs",
+              "RelativeToolTip": "Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:36:21.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:29:23.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Ticket.cs",
+              "RelativeToolTip": "Models\\Ticket.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA4wB4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:34:12.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\UserProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\UserProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:02:03.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAqwJoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:12:38.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EventDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\EventDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\EventDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\EventDetailsViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\EventDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:57:30.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:38:15.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:34:40.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EventLike.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\EventLike.cs",
+              "RelativeDocumentMoniker": "Models\\EventLike.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\EventLike.cs",
+              "RelativeToolTip": "Models\\EventLike.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:04:29.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:05:07.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\HomeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:31:11.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:02:49.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Following.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Following.cs",
+              "RelativeDocumentMoniker": "Models\\Following.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Following.cs",
+              "RelativeToolTip": "Models\\Following.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:03:58.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:55:39.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-19T11:18:57.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA9wBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:05:51.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EventBriteClone.csproj.Backup.tmp",
+              "DocumentMoniker": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\EventBriteClone.csproj.Backup.tmp",
+              "RelativeDocumentMoniker": "EventBriteClone.csproj.Backup.tmp",
+              "ToolTip": "C:\\Users\\rohit\\source\\repos\\EventBriteClone\\EventBriteClone.csproj.Backup.tmp",
+              "RelativeToolTip": "EventBriteClone.csproj.Backup.tmp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-19T12:02:30.609Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

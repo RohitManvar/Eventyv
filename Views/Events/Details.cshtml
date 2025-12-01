@@ -1,0 +1,122 @@
+﻿@model EventBriteClone.Models.ViewModels.EventDetailsViewModel
+@{
+    Layout = "_Layout";
+}
+
+<div class="container" style="max-width:1100px; margin:32px auto; padding:0 16px;">
+    <div style="display:flex; gap:32px; align-items:flex-start;">
+        <div style="flex:1; min-width:320px;">
+            <div class="event-summary-image" style="height:360px; border-radius:8px; background-size:cover; background-position:center; background-image:@(Model?.Event?.ImageUrl != null ? $"url('{Model.Event.ImageUrl}')" : "linear-gradient(135deg,#667eea 0%,#764ba2 100%)")">
+            </div>
+
+            <div style="margin-top:16px; display:flex; gap:12px; align-items:center;">
+                
+
+            </div>
+        </div>
+
+        <div style="flex:1.2; min-width:360px;">
+            <h1 style="margin:0 0 8px 0; font-size:28px;">@Model.Event?.Title</h1>
+            <p style="color:#6b7280; margin:0 0 12px 0;">By @Model.Organizer?.FirstName @Model.Organizer?.LastName</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+                <div style="background:#f9fafb; padding:12px; border-radius:8px;">
+                    <h4 style="margin:0 0 6px 0;">Date & Time</h4>
+                    <div style="color:#1e0a3c;">
+                        @if (Model.Event?.StartDate != null)
+                        {
+                            <div>@Model.Event.StartDate.ToString("f")</div>
+                        }
+                        @if (Model.Event?.EndDate != null)
+                        {
+                            <small style="color:#6b7280;">Ends @Model.Event.EndDate?.ToString("f")</small>
+                        }
+                    </div>
+                </div>
+
+                <div style="background:#f9fafb; padding:12px; border-radius:8px;">
+                    <h4 style="margin:0 0 6px 0;">Location</h4>
+                    <div style="color:#1e0a3c;">
+                        <div>@Model.Event?.Location</div>
+                        <small style="color:#6b7280;">@Model.Event?.Address @((!string.IsNullOrEmpty(Model.Event?.City) ? ", " + Model.Event.City : "")) @((!string.IsNullOrEmpty(Model.Event?.State) ? ", " + Model.Event.State : ""))</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section" style="margin-bottom:16px;">
+                <h2 style="margin:0 0 8px 0;">Description</h2>
+                <p style="color:#6b7280; line-height:1.6;">@Html.Raw(Model.Event?.Description?.Replace("\n", "<br/>") ?? "")</p>
+            </div>
+
+            <div class="form-section" style="margin-bottom:16px;">
+
+                <h2 style="margin:0 0 12px 0;">Tickets</h2>
+
+                @if (Model.Tickets != null && Model.Tickets.Any())
+                {
+                    <div style="display:grid; gap:12px;">
+                        @foreach (var t in Model.Tickets)
+                        {
+                            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px; border:1px solid #e5e7eb; border-radius:8px; background:white;">
+                                <div>
+                                    <div style="font-weight:700;">@t.Name</div>
+                                    <div style="color:#6b7280; font-size:13px;">
+                                        @if (t.IsFree)
+                                        {
+                                            <span>Free</span>
+                                        }
+                                        else
+                                        {
+
+                                            <span>Price: $@t.Price.ToString("0.00")</span>
+                                        }
+                                        <span style="margin-left:12px;">Available: @(t.Quantity - t.QuantitySold)</span>
+                                    </div>
+                                </div>
+
+                                <div style="display:flex; gap:8px; align-items:center;">
+                                    <a asp-controller="Orders" asp-action="Create" asp-route-eventId="@Model.Event?.Id" asp-route-ticketId="@t.Id" class="btn btn-primary" style="text-decoration:none;">
+                                        @(t.IsFree ? "Reserve" : "Buy")
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div style="color:#6b7280;">No tickets available for this event.</div>
+
+                }
+
+                <button type="button" class="btn btn-primary" onclick="#">Book Ticket</button>
+
+            </div>
+
+            <div style="margin-top:8px;">
+                <h3 style="margin:0 0 12px 0;">Similar events</h3>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    @if (Model.SimilarEvents != null && Model.SimilarEvents.Any())
+                    {
+                        foreach (var s in Model.SimilarEvents)
+                        {
+                            <a href="@Url.Action("Details", "Events", new { id = s.Id })" style="display:block; width:220px; text-decoration:none; color:inherit;">
+                                <div style="border:1px solid #e5e7eb; border-radius:8px; overflow:hidden; background:white;">
+                                    <div style="height:110px; background-image:@(s.ImageUrl != null ? $"url('{s.ImageUrl}')" : "linear-gradient(135deg,#eef2ff,#fdecea)"); background-size:cover; background-position:center;"></div>
+                                    <div style="padding:10px;">
+                                        <div style="font-weight:700; font-size:14px;">@s.Title</div>
+                                        <div style="color:#6b7280; font-size:13px;">@s.StartDate.ToString("MMM dd, yyyy") — @s.Location</div>
+                                    </div>
+                                </div>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        <div style="color:#6b7280;">No similar events found.</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

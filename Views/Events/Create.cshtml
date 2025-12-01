@@ -1,0 +1,905 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Plak:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Neue Plak', sans-serif;
+            background: #f8f7fa;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #f05537;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #3b5998;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #3b5998;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #1e0a3c;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-primary {
+            background: #3b5998;
+            color: white;
+        }
+
+            .btn-primary:hover {
+                background: #2d4373;
+            }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 72px);
+        }
+
+        .sidebar {
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            padding: 32px 24px;
+            overflow-y: auto;
+        }
+
+        .event-preview {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .event-preview-image {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .event-preview h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .event-preview p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .event-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: #f3f4f6;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .steps-section h4 {
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: #6b7280;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            cursor: pointer;
+        }
+
+        .step-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .step.active .step-icon {
+            background: #3b5998;
+            color: white;
+        }
+
+        .step.completed .step-icon {
+            background: #10b981;
+            color: white;
+        }
+
+        .step-content h5 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .main-content {
+            padding: 48px;
+            overflow-y: auto;
+        }
+
+        .form-container {
+            max-width: 800px;
+        }
+
+            .form-container h1 {
+                font-size: 32px;
+                margin-bottom: 8px;
+            }
+
+            .form-container .subtitle {
+                font-size: 16px;
+                color: #6b7280;
+                margin-bottom: 32px;
+            }
+
+        .section-container {
+            display: none;
+        }
+
+            .section-container.active {
+                display: block;
+            }
+
+        .form-section {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid #e5e7eb;
+        }
+
+            .form-section h2 {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+            .form-group label {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                padding: 12px 16px;
+                border: 1px solid #d1d5db;
+                border-radius: 8px;
+                font-size: 14px;
+                font-family: inherit;
+            }
+
+            .form-group textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            .form-group small {
+                display: block;
+                margin-top: 6px;
+                font-size: 12px;
+                color: #6b7280;
+            }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .image-upload {
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 48px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+            .image-upload:hover {
+                border-color: #f05537;
+                background: #fef2f2;
+            }
+
+            .image-upload i {
+                font-size: 48px;
+                color: #d1d5db;
+                margin-bottom: 16px;
+            }
+
+        .ticket-types {
+            display: grid;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .ticket-type-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: white;
+        }
+
+            .ticket-type-card:hover {
+                border-color: #3b5998;
+                box-shadow: 0 4px 12px rgba(59, 89, 152, 0.1);
+            }
+
+        .ticket-type-icon {
+            width: 48px;
+            height: 48px;
+            background: #eff6ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #3b5998;
+            flex-shrink: 0;
+        }
+
+        .ticket-type-content {
+            flex: 1;
+        }
+
+            .ticket-type-content h3 {
+                font-size: 18px;
+                margin-bottom: 4px;
+            }
+
+            .ticket-type-content p {
+                font-size: 14px;
+                color: #6b7280;
+            }
+
+        .event-summary-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+
+        .event-summary-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .check-mark {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .event-summary-content {
+            padding: 24px;
+        }
+
+        .event-summary-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .event-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            padding: 24px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
+        .event-info-item h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e0a3c;
+        }
+
+        .event-info-item p {
+            font-size: 14px;
+            color: #6b7280;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        @@media (max-width: 968px) {
+            .layout
+
+        {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            border-right: none;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .main-content {
+            padding: 24px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .event-info-grid {
+            grid-template-columns: 1fr;
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="event-preview">
+                <div class="event-preview-image" id="previewImage">
+                    + Add event image
+                </div>
+                <h3 id="previewTitle">Untitled Event</h3>
+                <p id="previewDate"><i class="fas fa-calendar"></i> Select date</p>
+                <div class="event-status">
+                    <i class="fas fa-file-alt"></i> Draft
+                </div>
+            </div>
+
+            <div class="steps-section">
+                <h4>Steps</h4>
+
+                <div class="step active" onclick="scrollToSection(0)">
+                    <div class="step-icon">1</div>
+                    <div class="step-content">
+                        <h5>Build event page</h5>
+                        <p>Add all your event details</p>
+                    </div>
+                </div>
+
+                <div class="step" onclick="scrollToSection(1)">
+                    <div class="step-icon">2</div>
+                    <div class="step-content">
+                        <h5>Add tickets</h5>
+                        <p>Create ticket types</p>
+                    </div>
+                </div>
+
+                <div class="step" onclick="scrollToSection(2)">
+                    <div class="step-icon">3</div>
+                    <div class="step-content">
+                        <h5>Publish</h5>
+                        <p>Review and publish</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <form id="publishEventForm" enctype="multipart/form-data" method="post" asp-action="PublishFullEvent" asp-controller="Events">
+                <input type="file" id="imageInput" name="ImageFile" accept="image/*" style="display: none;">
+                <!-- Hidden ticket inputs -->
+                <input type="hidden" name="Title" id="eventTitleInput">
+                <input type="hidden" name="Description" id="descriptionInput">
+                <input type="hidden" name="StartDate" id="startDateInput">
+                <input type="hidden" name="EndDate" id="endDateInput">
+                <input type="hidden" name="Location" id="locationInput">
+                <input type="hidden" name="Address" id="addressInput">
+                <input type="hidden" name="City" id="cityInput">
+                <input type="hidden" name="State" id="stateInput">
+                <input type="hidden" name="CategoryId" id="categoryIdInput">
+                <input type="hidden" name="EventType" id="eventTypeInput">
+
+                <input type="hidden" name="Tickets[0].Name" id="ticketNameInput">
+                <input type="hidden" name="Tickets[0].Price" id="ticketPriceInput">
+                <input type="hidden" name="Tickets[0].Quantity" id="ticketQuantityInput">
+
+            <!-- Step 1: Build Event Page -->
+            <div class="section-container active" id="section-1">
+                <div class="form-container">
+                    <h1>Build event page</h1>
+                    <p class="subtitle">Add all of your event details and let attendees know what to expect</p>
+
+                    <div class="form-section">
+                        <h2>Basic Info</h2>
+                        <div class="form-group">
+                            <label>Event title *</label>
+                            <input type="text" id="eventTitle" placeholder="Enter event title" required>
+                            <small>Be clear and descriptive</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Event type and category *</label>
+                            <div class="form-row">
+                                <select id="eventType" required>
+                                    <option value="">Select type</option>
+                                    <option value="Conference">Conference</option>
+                                    <option value="Concert">Concert</option>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="Tradeshow">Tradeshow</option>
+                                    <option value="Festival">Festival</option>
+                                </select>
+                                <select id="categoryId" required>
+                                    <option value="">Select category</option>
+                                    <option value="1">Community & Culture</option>
+                                    <option value="2">Business & Professional</option>
+                                    <option value="3">Arts & Entertainment</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tags</label>
+                            <input type="text" id="tags" placeholder="Add search keywords (comma-separated)">
+                            <small>Help people discover your event</small>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Date and time</h2>
+                        <div class="form-group">
+                            <label>Event starts *</label>
+                            <input type="datetime-local" id="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Event ends</label>
+                            <input type="datetime-local" id="endDate">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Location</h2>
+                        <div class="form-group">
+                            <label>Venue *</label>
+                            <input type="text" id="location" placeholder="Enter venue name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" id="address" placeholder="Enter street address">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" id="city" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <label>State/Province</label>
+                                <input type="text" id="state" placeholder="State">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Event image</h2>
+                        <div class="form-group">
+                            <div class="image-upload" onclick="document.getElementById('imageInput').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h3>Upload event image</h3>
+                                <p>Drag and drop or click to browse</p>
+                                <small>JPG, PNG or GIF (max 10MB)</small>
+                            </div>
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Description</h2>
+                        <div class="form-group">
+                            <label>Event description *</label>
+                            <textarea id="description" placeholder="Describe what makes your event unique" required></textarea>
+                            <small>Add details about what attendees can expect</small>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-outline" onclick="saveDraft()">Save as Draft</button>
+                        <button class="btn btn-primary" onclick="scrollToSection(1)">Continue to Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Add Tickets -->
+            <div class="section-container" id="section-2">
+                <div class="form-container">
+                    <h1>Create tickets</h1>
+                    <p class="subtitle">Choose a ticket type or build a section with multiple ticket types.</p>
+
+                    <div class="ticket-types">
+                        <div class="ticket-type-card" onclick="selectTicketType('paid')">
+                            <div class="ticket-type-icon" style="background: #eff6ff; color: #3b5998;">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div class="ticket-type-content">
+                                <h3>Paid</h3>
+                                <p>Create a ticket that people have to pay for.</p>
+                            </div>
+                        </div>
+
+                        <div class="ticket-type-card" onclick="selectTicketType('free')">
+                            <div class="ticket-type-icon" style="background: #f3e8ff; color: #7c3aed;">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="ticket-type-content">
+                                <h3>Free</h3>
+                                <p>Create a ticket that no one has to pay for.</p>
+                            </div>
+                        </div>
+
+                        <div class="ticket-type-card" onclick="selectTicketType('donation')">
+                            <div class="ticket-type-icon" style="background: #fee2e2; color: #dc2626;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="ticket-type-content">
+                                <h3>Donation</h3>
+                                <p>Let people pay any amount for their ticket.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="selectedTicket" style="background: #f9fafb; padding: 20px; border-radius: 8px; margin-top: 24px; display: none;">
+                        <p style="color: #6b7280;"><strong>Selected:</strong> <span id="ticketTypeName"></span></p>
+                        <div class="form-group" style="margin-top: 16px;">
+                            <label>Ticket Name</label>
+                            <input type="text" id="ticketName" placeholder="e.g., General Admission">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="number" id="ticketPrice" placeholder="0.00" min="0" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label>Quantity Available</label>
+                                <input type="number" id="ticketQuantity" placeholder="Unlimited" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn btn-outline" onclick="scrollToSection(0)">Back</button>
+                        <button class="btn btn-primary" onclick="scrollToSection(2)">Continue to Publish</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Publish -->
+            <div class="section-container" id="section-3">
+                <div class="form-container">
+                    <h1>Your event is almost ready to publish</h1>
+                    <p class="subtitle">Review your settings and let everyone find your event.</p>
+
+                    <div class="event-summary-card">
+                        <div class="event-summary-image" id="summaryImage" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <div class="check-mark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="event-summary-content">
+                            <h2 class="event-summary-title" id="summaryTitle">Your Event</h2>
+                            <p style="color: #6b7280; line-height: 1.6; margin-bottom: 24px;" id="summaryDescription">Event description will appear here</p>
+
+                            <div class="event-info-grid">
+                                <div class="event-info-item">
+                                    <h4>Date and time</h4>
+                                    <p id="summaryDateTime">
+                                        <i class="fas fa-calendar"></i> Select date
+                                    </p>
+                                </div>
+                                <div class="event-info-item">
+                                    <h4>Location</h4>
+                                    <p id="summaryLocation">
+                                        <i class="fas fa-map-marker-alt"></i> Select location
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Event type and category</h2>
+                        <p style="color: #6b7280; margin-bottom: 24px;">Your type and category help your event appear in more searches.</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select id="publishType">
+                                    <option value="Conference">Conference</option>
+                                    <option value="Concert">Concert</option>
+                                    <option value="Workshop">Workshop</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select id="publishCategory">
+                                    <option value="1">Community & Culture</option>
+                                    <option value="2">Business & Professional</option>
+                                    <option value="3">Arts & Entertainment</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                            <button type="button" class="btn btn-outline" onclick="scrollToSection(0)">Back</button>
+                            <button type="button" class="btn btn-primary" onclick="publishEvent(event)">Publish</button>
+
+
+                    </div>
+                </div>
+            </div>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        const eventData = {
+            title: '',
+            description: '',
+            startDate: '',
+            endDate: '',
+            location: '',
+            address: '',
+            city: '',
+            state: '',
+            image: null
+        };
+
+        // Update preview on input
+        document.getElementById('eventTitle').addEventListener('input', (e) => {
+            eventData.title = e.target.value;
+            document.getElementById('previewTitle').textContent = e.target.value || 'Untitled Event';
+            document.getElementById('summaryTitle').textContent = e.target.value || 'Your Event';
+        });
+
+        document.getElementById('startDate').addEventListener('change', (e) => {
+            eventData.startDate = e.target.value;
+            updateDatePreview();
+        });
+
+        document.getElementById('endDate').addEventListener('change', (e) => {
+            eventData.endDate = e.target.value;
+            updateDatePreview();
+        });
+
+        document.getElementById('description').addEventListener('input', (e) => {
+            eventData.description = e.target.value;
+            document.getElementById('summaryDescription').textContent = e.target.value || 'Event description will appear here';
+        });
+
+        document.getElementById('location').addEventListener('input', (e) => {
+            eventData.location = e.target.value;
+            updateLocationPreview();
+        });
+
+        document.getElementById('address').addEventListener('input', (e) => {
+            eventData.address = e.target.value;
+            updateLocationPreview();
+        });
+
+        function updateDatePreview() {
+            if (eventData.startDate) {
+                const date = new Date(eventData.startDate);
+                const formatted = date.toLocaleString('en-US', {
+                    weekday: 'short',
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit'
+                });
+                document.getElementById('previewDate').innerHTML = `<i class="fas fa-calendar"></i> ${formatted}`;
+                document.getElementById('summaryDateTime').innerHTML = `<i class="fas fa-calendar"></i> ${formatted}`;
+            }
+        }
+
+                function updateLocationPreview() {
+            const location = [eventData.location, eventData.address, eventData.city, eventData.state]
+                .filter(Boolean)
+                .join(', ') || 'Select location';
+            document.getElementById('summaryLocation').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${location}`;
+        }
+
+        document.getElementById('imageInput').addEventListener('change', (e) => {
+            if (e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const img = event.target.result;
+                    eventData.image = img;
+                    document.getElementById('previewImage').style.backgroundImage = `url(${img})`;
+                    document.getElementById('previewImage').innerHTML = '';
+                    document.getElementById('summaryImage').style.backgroundImage = `url(${img})`;
+                };
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        });
+
+        function selectTicketType(type) {
+            document.getElementById('selectedTicket').style.display = 'block';
+            const names = { paid: 'Paid Ticket', free: 'Free Ticket', donation: 'Donation' };
+            document.getElementById('ticketTypeName').textContent = names[type];
+        }
+
+        function scrollToSection(index) {
+            document.querySelectorAll('.section-container').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+
+            const sections = ['section-1', 'section-2', 'section-3'];
+            document.getElementById(sections[index]).classList.add('active');
+            document.querySelectorAll('.step')[index].classList.add('active');
+
+            document.querySelector('.main-content').scrollTop = 0;
+        }
+
+        function saveDraft() {
+            alert('Event saved as draft!');
+            console.log('Draft saved:', eventData);
+        }
+                function publishEvent(e) {
+            e.preventDefault();
+
+            // Validate required fields
+            if (!eventData.title || !eventData.startDate || !eventData.location || !eventData.description) {
+                alert("Please fill in all required fields");
+                return;
+            }
+
+            // Ticket info
+            const ticketName = document.getElementById("ticketName").value;
+            const ticketPrice = document.getElementById("ticketPrice").value || 0;
+            const ticketQuantity = document.getElementById("ticketQuantity").value || 0;
+
+            if (document.getElementById("selectedTicket").style.display === "block" && !ticketName) {
+                alert("Please enter a ticket name for the selected ticket type");
+                return;
+            }
+
+            // Copy values to hidden inputs
+            document.getElementById("eventTitleInput").value = eventData.title;
+            document.getElementById("descriptionInput").value = eventData.description;
+            document.getElementById("startDateInput").value = eventData.startDate;
+            document.getElementById("endDateInput").value = eventData.endDate;
+            document.getElementById("locationInput").value = eventData.location;
+            document.getElementById("addressInput").value = eventData.address;
+            document.getElementById("cityInput").value = eventData.city;
+            document.getElementById("stateInput").value = eventData.state;
+            document.getElementById("categoryIdInput").value = document.getElementById("categoryId").value;
+            document.getElementById("eventTypeInput").value = document.getElementById("eventType").value;
+
+            // Ticket hidden inputs
+            document.getElementById("ticketNameInput").value = ticketName;
+            document.getElementById("ticketPriceInput").value = ticketPrice;
+            document.getElementById("ticketQuantityInput").value = ticketQuantity;
+
+            // Submit form
+            document.getElementById("publishEventForm").submit();
+        }
+
+
+        function previewEvent() {
+            alert('Preview functionality would open a new window with the event preview');
+        }
+
+    </script>
+</body>
+</html>

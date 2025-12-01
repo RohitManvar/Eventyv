@@ -1,0 +1,461 @@
+﻿@model EventBriteClone.Models.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - EventBrite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Neue+Plak:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Neue Plak', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1e0a3c;
+            background: #f8f7fa;
+        }
+
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 60px 24px;
+            text-align: center;
+            color: white;
+            background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+            .hero-banner::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-banner h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-banner .highlight {
+            color: #f05537;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: white;
+            color: #1e0a3c;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+
+            .cta-btn:hover {
+                transform: translateY(-2px);
+            }
+
+        /* Categories */
+        .categories {
+            max-width: 1280px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .category-item {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+            .category-item:hover {
+                transform: translateY(-4px);
+            }
+
+        .category-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 12px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #f05537;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #39364f;
+        }
+
+        /* Events Section */
+        .events-section {
+            max-width: 1280px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+            .section-header h2 {
+                font-size: 28px;
+                font-weight: 700;
+            }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: white;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e8e8e8;
+        }
+
+        .tab {
+            padding: 12px 0;
+            font-weight: 600;
+            color: #6b7280;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+            .tab.active {
+                color: #1e0a3c;
+                border-bottom-color: #f05537;
+            }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+            .event-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            }
+
+        .event-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .event-content {
+            padding: 16px;
+        }
+
+        .event-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1e0a3c;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .event-date {
+            font-size: 14px;
+            color: #f05537;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .event-location {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .event-price {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e0a3c;
+        }
+
+        .event-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Destinations */
+        .destinations {
+            max-width: 1280px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+            .destinations h2 {
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .destination-card {
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+            .destination-card:hover {
+                transform: scale(1.02);
+            }
+
+        .destination-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .destination-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+        }
+
+        .destination-name {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>THIS FALL MAKE<br>IT A <span class="highlight">MOMENT</span></h1>
+            <a href="#events" class="cta-btn">Get Tickets Now</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="category-grid">
+            @if (Model?.Categories != null)
+            {
+                @foreach (var category in Model.Categories)
+                {
+                    <div class="category-item" onclick="location.href='/Events?categoryId=@category.Id'">
+                        <div class="category-icon">
+                            <i class="fas @category.IconClass"></i>
+                        </div>
+                        <div class="category-name">@category.Name</div>
+                    </div>
+                }
+            }
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section" id="events">
+        <div class="section-header">
+            <h2>
+                Browsing events in
+                <span class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    @(Model?.Location ?? "City")
+                </span>
+            </h2>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">All</div>
+            <div class="tab">Today</div>
+            <div class="tab">This weekend</div>
+        </div>
+
+        <h3 style="font-size: 24px; margin-bottom: 24px; font-weight: 700;">Events in @(Model?.Location ?? "City")</h3>
+
+        <div class="events-grid">
+            @if (Model?.FeaturedEvents != null && Model.FeaturedEvents.Any())
+            {
+                @foreach (var evt in Model.FeaturedEvents)
+                {
+                    <div class="event-card" onclick="location.href='/Events/Details/@evt.Id'">
+                        <img src="@(evt.ImageUrl ?? "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400")" alt="@evt.Title" class="event-image">
+                        <div class="event-content">
+                            <div class="event-title">@evt.Title</div>
+                            <div class="event-date">@evt.StartDate.ToString("ddd, MMM d • h:mm tt")</div>
+                            <div class="event-location">@evt.Location</div>
+                            <div class="event-price">
+                                @if (evt.IsFree)
+                                {
+                                    <span>Free</span>
+                                }
+                                else
+                                {
+                                    <span>From $@evt.Price</span>
+                                }
+                            </div>
+                            @if (evt.IsFree)
+                            {
+                                <span class="event-badge">Free</span>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <!-- Sample Events for Demo -->
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400" alt="Event" class="event-image">
+                    <div class="event-content">
+                        <div class="event-title">Budgeting for the Holidays - Free Online Workshop</div>
+                        <div class="event-date">Wed, Nov 26 • 6:00 AM GMT+5:30</div>
+                        <div class="event-location">Vadodara</div>
+                        <div class="event-price">Free</div>
+                        <span class="event-badge">Free</span>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400" alt="Event" class="event-image">
+                    <div class="event-content">
+                        <div class="event-title">18TH ENGIEEXPO INDUSTRIAL FAIR AT SURAT 2026</div>
+                        <div class="event-date">Sat, Feb 7 • 9:30 AM</div>
+                        <div class="event-location">Pandesara Lifestyle Ground, Vadodara</div>
+                        <div class="event-price">From $1.50</div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400" alt="Event" class="event-image">
+                    <div class="event-content">
+                        <div class="event-title">Best Pushkar Holi Party Trip Package From Vadodara 2026 By Traveltoabs</div>
+                        <div class="event-date">Mar, 17 • 5:00 AM</div>
+                        <div class="event-location">Vadodara</div>
+                        <div class="event-price">Free</div>
+                        <span class="event-badge">Free</span>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1559223607-4c0e16bc7cab?w=400" alt="Event" class="event-image">
+                    <div class="event-content">
+                        <div class="event-title">Sales and soon Teach with Ease</div>
+                        <div class="event-date">Tomorrow • 8:30 AM GMT+5:30</div>
+                        <div class="event-location">Vadodara</div>
+                        <div class="event-price">Free</div>
+                        <span class="event-badge">Free</span>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <!-- Top Destinations -->
+    <section class="destinations">
+        <h2>Top destinations in United States</h2>
+        <div class="destinations-grid">
+            @if (Model?.PopularCities != null)
+            {
+                var cityImages = new Dictionary<string, string>
+                        {
+                        {"New York", "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400"},
+                        {"Los Angeles", "https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=400"},
+                        {"Chicago", "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400"},
+                        {"Washington", "https://images.unsplash.com/photo-1617581629397-a72507c3de9e?w=400"}
+                        };
+
+                @foreach (var city in Model.PopularCities.Take(4))
+                {
+                    <div class="destination-card" onclick="location.href='/Events?city=@city'">
+                        <img src="@(cityImages.ContainsKey(city) ? cityImages[city] : "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400")" alt="@city" class="destination-image">
+                        <div class="destination-overlay">
+                            <div class="destination-name">@city</div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </section>
+
+</body>
+</html>
