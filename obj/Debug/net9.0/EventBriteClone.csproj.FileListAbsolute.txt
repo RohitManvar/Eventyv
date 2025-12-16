@@ -275,3 +275,4 @@ C:\Users\rohit\source\repos\EventBriteClone\obj\Debug\net9.0\compressed\q9d6v82a
 C:\Users\rohit\source\repos\EventBriteClone\obj\Debug\net9.0\compressed\ncntdz5q4b-nr0zwrqe4i.gz
 C:\Users\rohit\source\repos\EventBriteClone\obj\Debug\net9.0\compressed\ot2jzvjbb9-nr0zwrqe4i.gz
 C:\Users\rohit\source\repos\EventBriteClone\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\rohit\source\repos\EventBriteClone\obj\Debug\net9.0\EventBriteClone.sourcelink.json
