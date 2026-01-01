@@ -1,4 +1,4 @@
-# 🎉 Eventyv — Event Management Web Application (.NET)
+# Eventyv — Event Management Web Application (.NET)
 
 Eventyv is a **production-ready event management web application** built using **ASP.NET Core (.NET)**.  
 The project demonstrates **clean architecture, backend development skills**.
